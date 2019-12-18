@@ -63,11 +63,14 @@ h2 {
 }
 
 #todo-list .todo-item {
-    padding: 15px 20px;
+    padding: 18px 20px;
     border-bottom: 1px solid #e7e7e7;
     color: #717171;
     display: flex;
     transition: all 0.5s ease;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -78,10 +81,9 @@ h2 {
 
 input[type="checkbox"] {
     position: relative;
-    top: 3px;
     margin-right: 10px;
-    width: 17px;
-    height: 17px;
+    width: 18px;
+    height: 18px;
 
 }
 
@@ -99,9 +101,12 @@ input[type="checkbox"] {
 }
 #input {
     padding: 18px;
-    width: 85%;
-    padding-left: 5px;
+width: 80%;
+padding-left: 15px;
 padding-right: 40px;
+border: 0;
+border-right: 0.5px solid grey;
+font-size: 0.8em;
 
 }
  span.add-icon {
