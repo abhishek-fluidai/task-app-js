@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript Projects </title>
+    <script src="https://kit.fontawesome.com/ed834199ae.js"></script>
+    <link rel="stylesheet" href="./style.css">
+  
 </head>
 <body>
-    <div id="container">
-        <ul>
-            <li>home</li>
-            <li>vvv</li>
-            <li>bbbbb</li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+    <div class="phone">
+            <div class="header">
+                <h2>JS Todo</h2>
+             
+                <div class="removeText" onclick="clearAlltasks()">&#128465; Clean Checked Tasks</div>
+            </div>
     
+            <div class="todo-body">
+                <ul id="todo-list">
+                    <li class="todo-item " id="0" >
+                    <input type="checkbox"   onchange="completeTask(0)"/> <span class="itemi">Welcome to your Todo-List</span>
+                    <span class="close-icon" onclick="removeTask(0)">&#10006;</span>
+                </ul>
+            </div>
+            <label class="todoInput" >
+            <input type="text" name="task" id="input" placeholder="Enter a task and press enter">
+            <span id="addBtn" class="add-icon" onclick="addTask()">&#10010;</span>
+            </label>
+    
+</div>   
+<script src="./script/script.js"></script> 
+
 </body>
 </html>

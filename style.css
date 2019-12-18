@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+    background: #f4f4f4;
+    user-select: none;
+}
+
+.phone {
+    position: relative;
+    margin: 2% auto;
+    width: 360px;
+    height: 600px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+h2 {
+    margin-bottom: 1.5rem
+}
+.header {
+    position: relative;
+    padding: 25px;
+    width: 100%;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #ffffff;
+    line-height: 28px !important;
+}
+
+.removeText {
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 4px 15px;
+    display: inline;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+    user-select: none;
+
+
+}
+
+
+.todo-body {
+    position: relative;
+    width: 100%;
+    height: 416px;
+    overflow-y: scroll;
+}
+
+.todo-body::-webkit-scrollbar {
+    background: transparent;
+    width: 5px;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+#todo-list .todo-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e7e7e7;
+    color: #717171;
+    display: flex;
+    transition: all 0.5s ease;
+   
+}
+
+.todo-item.checked .itemi {
+    text-decoration: line-through;
+    
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 3px;
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+
+}
+
+.todoInput {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+     width: 100%;
+    border: 0;
+    border-top: 1px solid #e7e7e7;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 999;
+}
+#input {
+    padding: 18px;
+    width: 85%;
+    padding-left: 5px;
+padding-right: 40px;
+
+}
+ span.add-icon {
+    cursor: pointer;
+      margin: 0 auto;
+     display: inline-block;
+ }
+ .add-icon {
+    font-size: 2.6em;
+    margin: 0 auto;
+ }
+ span.close-icon {
+     margin-left: auto;
+     cursor: pointer;
+     font-size: 22px; 
+     transition: all 0.3s ease;
+     
+ }
+ span.close-icon:hover {
+    color:#0f0e0e;
+    }
+
+@media only screen and (max-width: 500px)  {
+    .phone {
+         margin:0px;
+    width: 100vw;
+    height: 100vh;
+    border: 0px ;
+    border-radius: 0px;
+    }
+    .removeText {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+}
