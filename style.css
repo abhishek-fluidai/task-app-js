@@ -115,11 +115,9 @@ font-size: 0.8em;
     cursor: pointer;
       margin: 0 auto;
      display: inline-block;
+     font-size: 2.6em;
  }
- .add-icon {
-    font-size: 2.6em;
-    margin: 0 auto;
- }
+ 
  span.close-icon {
      margin-left: auto;
      cursor: pointer;
@@ -146,5 +144,12 @@ font-size: 0.8em;
     }
     #todo-list .todo-item {
         padding: 16px 20px;
+    }
+    span.add-icon {
+        font-size: 2.2em;
+     }
+     
+     span.close-icon { 
+        font-size: 20px;
     }
 }
