@@ -25,7 +25,7 @@ h2 {
 }
 .header {
     position: relative;
-    padding: 25px;
+    padding: 20px;
     width: 100%;
     background: linear-gradient(to right, #ff416c, #ff4b2b);
     color: #ffffff;
@@ -98,7 +98,9 @@ input[type="checkbox"] {
     flex-direction: row;
     align-items: center;
     z-index: 999;
+    background-color:white;
 }
+
 #input {
     padding: 18px;
 width: 80%;
@@ -141,5 +143,8 @@ font-size: 0.8em;
      display: flex;
     align-items: center;
     justify-content: center;
+    }
+    #todo-list .todo-item {
+        padding: 16px 20px;
     }
 }
