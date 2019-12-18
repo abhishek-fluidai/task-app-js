@@ -1,6 +1,6 @@
 {
-    "name": "Hello World",
-    "short_name": "Hello",
+    "name": "Task App",
+    "short_name": "Js Task",
     "icons": [
         {
          "src": "icons/android-icon-36x36.png",
