@@ -28,13 +28,14 @@
 
     function removeTask(e) {
       var a = document.getElementById(e);
-        a.style.display = "none"
+        // a.style.display = "none"
+        a.remove()
     }
     const clearAlltasks = () => {
-      // let a =  document.querySelector('.checked')[1].style.display = "none"
-      var a = document.querySelectorAll('.checked');
-      for(var i=0; i< a.length; i++){
-        a[i].style.display = "none"
+      let a = document.querySelectorAll('.checked');
+      for(let i=0; i< a.length; i++){
+        a[i].remove();
+        console.log(i)
     }
       }
 
@@ -48,3 +49,13 @@
       });
 
  
+//PWA Settings 
+window.onload = () => {
+  'use strict';
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+}
+
