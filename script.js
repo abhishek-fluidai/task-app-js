@@ -88,7 +88,7 @@
     </li>`;
  
     if (addedTasks[i].completed == "checked" ) {
-    document.getElementsByClassName(addedTasks[i].id)[0].setAttribute('checked', 'true')
+    document.getElementsByClassName(addedTasks[i].id)[0].setAttribute('checked', '')
          }
        }
      }
