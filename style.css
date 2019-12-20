@@ -160,4 +160,8 @@ font-size: 0.8em;
      span.close-icon { 
         font-size: 20px;
     }
+    input[type="checkbox"] {
+                width: 20px;
+        height: 20px;
+    }
 }
