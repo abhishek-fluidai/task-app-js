@@ -26,7 +26,8 @@
         if (check.checked== true ) {
          task.classList.add('checked');
          task.classList.remove('false');
-        //  check.checked = "checked"
+        check.setAttribute("checked", ""); 
+
          
           for (var i =0; i < taskArrey.length; i++)
           if (taskArrey[i].id == e) {
@@ -43,6 +44,7 @@
         else if (check.checked == false ) {
           task.classList.remove('checked');
           task.classList.add('false');
+          check.removeAttribute("checked")
           // check.checked = ""
           for (var i =0; i < taskArrey.length; i++)
           if (taskArrey[i].id == e) {
