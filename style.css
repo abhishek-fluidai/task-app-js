@@ -73,10 +73,11 @@ flex-direction: column;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: all 1s ease;
+    transition: all 0.001s ease;
+    /* order: 2; */
    
 }
-.todo-item.checked {
+.checked {
     order:-999;
 }
 .dummy {
@@ -163,5 +164,10 @@ font-size: 0.8em;
     input[type="checkbox"] {
                 width: 20px;
         height: 20px;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .todo-item:hover {
+        background: #f8f8f8;
     }
 }

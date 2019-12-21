@@ -11,7 +11,7 @@
         taskList.innerHTML += `
         <li class="todo-item false" id="${ids+1}" >
         <input type="checkbox" class="${ids+1}"   onclick="completeTask(${ids+1})"/> <span class="itemi">${val} </span>
-        <span class="close-icon" onclick="removeTask(${ids+1})">&#10006;</span>
+        <span class="close-icon" onchange="removeTask(${ids+1})">&#10006;</span>
     </li>`;
       // Storing Dat In Localstorage
      taskArrey.push({"id": `${ids+1}`, "contant": `${val}`, "completed": "false"});  
@@ -76,6 +76,18 @@
 
       }
 
+    //   const clearAlltasks = () => {
+    //      for (let i =0; i < taskArrey.length; i++) {
+    //       // console.log(addedTasks[i])
+          
+    // if (taskArrey[i].completed == "checked" ) {
+    // document.getElementById(taskArrey[i].id).remove();
+    //   taskArrey.splice(i,1);
+    //         break;
+    //      }
+    //    }
+    //   }
+
      const loadTasks = () => {
       let addedTasks = JSON.parse(localStorage.getItem('taskArrey'));
        for (let i =0; i < addedTasks.length; i++) {
@@ -83,7 +95,7 @@
           taskArrey.push({"id": `${addedTasks[i].id}`, "contant": `${addedTasks[i].contant}`, "completed":`${addedTasks[i].completed}`}); 
         taskList.innerHTML += `
         <li class="todo-item ${addedTasks[i].completed}" id="${addedTasks[i].id}" >
-        <input type="checkbox" class="${addedTasks[i].id}"  onclick="completeTask(${addedTasks[i].id})"/> <span class="itemi"> ${addedTasks[i].contant}</span>
+        <input type="checkbox" class="${addedTasks[i].id}"  onchange="completeTask(${addedTasks[i].id})"/> <span class="itemi"> ${addedTasks[i].contant}</span>
         <span class="close-icon" onclick="removeTask(${addedTasks[i].id})">&#10006;</span>
     </li>`;
  
@@ -94,32 +106,6 @@
      }
 
    
-  //   const clearAlltasks = () => {
-   
-  //     let a = document.querySelectorAll('.todo-item.checked');
-  //       for (var v =0; v < completedTasks.length; v++) {
-  //         a[v].remove();
-                   
-  //         for (var i =0; i < taskArrey.length; i++) {
-  //              if (taskArrey[i].id == v) {
-  //                   taskArrey.splice(i,1);
-  //                   console.log(taskArrey[i])
-  //                   localStorage.removeItem('taskArrey');
-  //                   localStorage.setItem('taskArrey', JSON.stringify(taskArrey));
-                    
-  //               }
-                
-  //             }
-                         
-  //             }
-  //             // localStorage.removeItem('taskArrey');
-  //             // localStorage.setItem('taskArrey', JSON.stringify(taskArrey));
-       
-          
-        
-  // }
-  
-
 
       document.addEventListener("keypress", (e) => {
         if (e.keyCode == 13 && inp.value !== "") {
@@ -135,12 +121,12 @@
       });
  
 // PWA Settings 
-window.onload = () => {
-  'use strict';
+// window.onload = () => {
+//   'use strict';
 
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
-  }
-}
+//   if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker
+//              .register('./sw.js');
+//   }
+// }
 
