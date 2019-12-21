@@ -46,9 +46,7 @@
           for (var i =0; i < taskArrey.length; i++)
           if (taskArrey[i].id == e) {
               taskArrey[i].completed = "false"
-            
-            
-              break;
+               break;
          }
          localStorage.removeItem('taskArrey');
         localStorage.setItem('taskArrey', JSON.stringify(taskArrey));
