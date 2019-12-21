@@ -2,8 +2,7 @@
   const btn = document.getElementById('addBtn');
   let taskList =  document.getElementById('todo-list')
   let taskArrey =[];
-  let completedTasks = [];
-  let ids = 0;
+   let ids = 0;
     function addTask() {
         let val = inp.value;
         
@@ -32,9 +31,7 @@
           for (var i =0; i < taskArrey.length; i++)
           if (taskArrey[i].id == e) {
               taskArrey[i].completed = "checked"
-              // taskArrey[i].checked = "checked"
-                 completedTasks.push(i)
-              
+                            
               break;
          }
         //  console.log(taskArrey)
@@ -49,18 +46,15 @@
           for (var i =0; i < taskArrey.length; i++)
           if (taskArrey[i].id == e) {
               taskArrey[i].completed = "false"
-              var index = completedTasks.indexOf(i);
-            if (index !== -1) completedTasks.splice(index, 1);
+            
             
               break;
          }
          localStorage.removeItem('taskArrey');
         localStorage.setItem('taskArrey', JSON.stringify(taskArrey));
-
-         
+       
         }
-      //  check.checked ? task.classList.add('checked') : task.classList.remove('checked')
-    }
+         }
 
     function removeTask(e) {
       var a = document.getElementById(e);
@@ -76,18 +70,7 @@
 
       }
 
-    //   const clearAlltasks = () => {
-    //      for (let i =0; i < taskArrey.length; i++) {
-    //       // console.log(addedTasks[i])
-          
-    // if (taskArrey[i].completed == "checked" ) {
-    // document.getElementById(taskArrey[i].id).remove();
-    //   taskArrey.splice(i,1);
-    //         break;
-    //      }
-    //    }
-    //   }
-
+  
      const loadTasks = () => {
       let addedTasks = JSON.parse(localStorage.getItem('taskArrey'));
        for (let i =0; i < addedTasks.length; i++) {
@@ -116,17 +99,16 @@
         }
       });
       window.addEventListener('load', () => {
-        console.log('page is fully loaded');
-        loadTasks();
+              loadTasks();
       });
  
 // PWA Settings 
-// window.onload = () => {
-//   'use strict';
+window.onload = () => {
+  'use strict';
 
-//   if ('serviceWorker' in navigator) {
-//     navigator.serviceWorker
-//              .register('./sw.js');
-//   }
-// }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+}
 
