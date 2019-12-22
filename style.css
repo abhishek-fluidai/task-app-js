@@ -138,7 +138,7 @@ font-size: 0.8em;
     color:#0f0e0e;
     }
 
-@media only screen and (max-width: 500px)  {
+@media only screen and (max-width: 750px)  {
     .phone {
          margin:0px;
     width: 100vw;
@@ -164,6 +164,9 @@ font-size: 0.8em;
     input[type="checkbox"] {
                 width: 20px;
         height: 20px;
+    }
+    .todo-body {
+        height: 100%;
     }
 }
 @media only screen and (min-width: 800px) {
