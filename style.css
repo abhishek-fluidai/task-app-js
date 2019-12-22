@@ -79,6 +79,7 @@ flex-direction: column;
 }
 .checked {
     order:-999;
+    background: #f8f8f8;
 }
 .dummy {
     order:-9999;
@@ -86,9 +87,6 @@ flex-direction: column;
 .todo-item.checked .itemi {
     text-decoration: line-through;
     
-}
-.todo-item.checked  {
-background: #f8f8f8;
 }
 
 input[type="checkbox"] {
