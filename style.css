@@ -79,7 +79,7 @@ flex-direction: column;
 }
 .checked {
     order:-999;
-    background: #f8f8f8;
+    /* background: #f8f8f8; */
 }
 .dummy {
     order:-9999;
@@ -141,16 +141,16 @@ font-size: 0.8em;
 
 @media only screen and (max-width: 900px)  {
     .phone {
-         margin:0px;
-    width: 100vw;
-    height: 100vh;
-    border: 0px ;
-    border-radius: 0px;
+        margin:0px;
+        width: 100vw;
+        height: 100vh;
+        border: 0px ;
+        border-radius: 0px;
     }
     .removeText {
-     display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #todo-list .todo-item {
         padding: 18px 20px;
@@ -163,11 +163,15 @@ font-size: 0.8em;
         font-size: 20px;
     }
     input[type="checkbox"] {
-                width: 20px;
+        width: 20px;
         height: 20px;
     }
     .todo-body {
         height: 100%;
+    }
+    .todoInput { 
+        position: fixed;
+        bottom: 0;
     }
 }
 @media only screen and (min-width: 800px) {
