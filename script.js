@@ -29,9 +29,7 @@ let ids = 0;
        
       check.setAttribute("checked", ""); 
 
-       var z= taskArrey.length+1
-       console.log(z);
-        for (var i =0; i < taskArrey.length; i++) {
+              for (var i =0; i < taskArrey.length; i++) {
         if (taskArrey[i].id == e) {
             taskArrey[i].completed = "checked"
             // taskArrey[i].checked = "checked"
