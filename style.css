@@ -77,10 +77,10 @@ flex-direction: column;
     /* order: 2; */
    
 }
-.checked {
+/* .checked {
     order:-999;
     /* background: #f8f8f8; */
-}
+} */
 .dummy {
     order:-9999;
 }

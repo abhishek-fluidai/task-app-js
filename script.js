@@ -10,7 +10,7 @@ let ids = 0;
       val== "" ||val == null ? alert('Please enter a Task!') : 
       taskList.innerHTML += `
       <li class="todo-item false" id="${ids+1}" >
-      <input type="checkbox" class="${ids+1}"   onclick="completeTask(${ids+1})"/> <span class="itemi">${val} </span>
+      <input type="checkbox" class="${ids+1}"   onchange="completeTask(${ids+1})"/> <span class="itemi">${val} </span>
       <span class="close-icon" onclick="removeTask(${ids+1})">&#10006;</span>
   </li>`;
     // Storing Dat In Localstorage
@@ -24,12 +24,14 @@ let ids = 0;
       let task = document.getElementById(e);
       let check = document.getElementsByClassName(e)[0];
       if (check.checked== true ) {
+        task.classList.remove('false');
        task.classList.add('checked');
-       task.classList.remove('false');
+       
       check.setAttribute("checked", ""); 
 
-       
-        for (var i =0; i < taskArrey.length; i++)
+       var z= taskArrey.length+1
+       console.log(z);
+        for (var i =0; i < taskArrey.length; i++) {
         if (taskArrey[i].id == e) {
             taskArrey[i].completed = "checked"
             // taskArrey[i].checked = "checked"
@@ -37,6 +39,7 @@ let ids = 0;
             
             break;
        }
+      }
       //  console.log(taskArrey)
       localStorage.removeItem('taskArrey');
       localStorage.setItem('taskArrey', JSON.stringify(taskArrey));
@@ -46,13 +49,14 @@ let ids = 0;
         task.classList.add('false');
         check.removeAttribute("checked")
         // check.checked = ""
-        for (var i =0; i < taskArrey.length; i++)
+        for (var i =0; i < taskArrey.length; i++) {
         if (taskArrey[i].id == e) {
             taskArrey[i].completed = "false"
           //   var index = completedTasks.indexOf(i);
           // if (index !== -1) completedTasks.splice(index, 1);
           
             break;
+        }
        }
        localStorage.removeItem('taskArrey');
       localStorage.setItem('taskArrey', JSON.stringify(taskArrey));
@@ -78,12 +82,13 @@ let ids = 0;
 
    const loadTasks = () => {
     let addedTasks = JSON.parse(localStorage.getItem('taskArrey'));
+    ids = addedTasks.length
      for (let i =0; i < addedTasks.length; i++) {
         console.log(addedTasks[i])
         taskArrey.push({"id": `${addedTasks[i].id}`, "contant": `${addedTasks[i].contant}`, "completed":`${addedTasks[i].completed}`}); 
       taskList.innerHTML += `
       <li class="todo-item ${addedTasks[i].completed}" id="${addedTasks[i].id}" >
-      <input type="checkbox" class="${addedTasks[i].id}"  onclick="completeTask(${addedTasks[i].id})"/> <span class="itemi"> ${addedTasks[i].contant}</span>
+      <input type="checkbox" class="${addedTasks[i].id}"  onchange="completeTask(${addedTasks[i].id})"/> <span class="itemi"> ${addedTasks[i].contant}</span>
       <span class="close-icon" onclick="removeTask(${addedTasks[i].id})">&#10006;</span>
   </li>`;
 
@@ -91,6 +96,7 @@ let ids = 0;
   document.getElementsByClassName(addedTasks[i].id)[0].setAttribute('checked', '')
        }
      }
+    
    }
 
  
