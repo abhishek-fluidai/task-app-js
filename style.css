@@ -87,6 +87,9 @@ flex-direction: column;
     text-decoration: line-through;
     
 }
+.todo-item.checked  {
+background: #f8f8f8;
+}
 
 input[type="checkbox"] {
     position: relative;
@@ -138,7 +141,7 @@ font-size: 0.8em;
     color:#0f0e0e;
     }
 
-@media only screen and (max-width: 750px)  {
+@media only screen and (max-width: 900px)  {
     .phone {
          margin:0px;
     width: 100vw;
